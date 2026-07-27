@@ -13,24 +13,8 @@ Most published approaches address this by pre-processing the scan with a **fixed
 
 This project takes a different approach: a small U-Net **learns** the vessel enhancement as part of training, and both stages are optimised together end-to-end.
 
-```
-Raw TOF-MRA volume  [B, 1, D, H, W]
-        │
-        ▼
-┌─────────────────────────────┐
-│  Vessel Enhancement Subnet  │   lightweight 3D U-Net (16→32→64)
-│  → vesselness map (sigmoid) │
-└─────────────────────────────┘
-        │
-        ▼  concatenate along channel dim
-   [B, 2, D, H, W]   (raw volume + vesselness map)
-        │
-        ▼
-┌─────────────────────────────┐
-│  Aneurysm Detection Subnet  │   deeper 3D U-Net (32→64→128→256)
-│  → aneurysm logits          │
-└─────────────────────────────┘
-```
+<img width="868" height="380" alt="image" src="https://github.com/user-attachments/assets/7e1cfdb5-a923-47c3-893c-24a89c204eba" />
+
 
 Both subnets are trained jointly — the vessel subnet receives gradients from the detection loss, so it learns to highlight whatever the detector actually finds useful, rather than what a hand-designed filter assumes is useful.
 
