@@ -125,4 +125,3 @@ Python · PyTorch · NumPy · nibabel · matplotlib · Optuna
 
 **Ahmad Sayuti bin Hassan Shaari**
 B.Eng. Electrical & Electronics Engineering (Hons), IIUM
-[LinkedIn](https://www.linkedin.com/in/sayutihs/)
