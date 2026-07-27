@@ -4,19 +4,6 @@ A two-stage 3D deep learning pipeline that detects and segments unruptured intra
 
 **Final Year Project** — B.Eng. Electrical & Electronics Engineering, International Islamic University Malaysia (IIUM), 2026.
 
----
-
-## Result
-
-| Metric | Score |
-|---|---|
-| **Sensitivity** | **82%** |
-| Dice | _(fill in)_ |
-| Specificity | _(fill in)_ |
-
-Evaluated on a held-out test set of unseen patients from the ADAM challenge dataset.
-
----
 
 ## The idea
 
